@@ -1,238 +1,137 @@
-// Image processing functions using Canvas API and browser APIs
-// All processing runs in the browser - zero server calls
+export async function processImg(id, file, opts = {}) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
 
-export async function compressImage(file, quality = 0.8) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob(
-          (blob) => {
-            resolve({ blob, size: blob.size, url: URL.createObjectURL(blob) });
-          },
-          'image/jpeg',
-          quality
-        );
-      };
-      img.src = e.target.result;
+    img.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error("Could not load image"));
     };
-    reader.readAsDataURL(file);
-  });
-}
 
-export async function resizeImage(file, width, height) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0, width, height);
-        canvas.toBlob(
-          (blob) => {
-            resolve({ blob, url: URL.createObjectURL(blob), width, height });
-          },
-          'image/png'
-        );
-      };
-      img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
-}
+    img.onload = () => {
+      try {
+        const c = document.createElement("canvas");
+        const ctx = c.getContext("2d");
 
-export async function cropImage(file, x, y, width, height) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, x, y, width, height, 0, 0, width, height);
-        canvas.toBlob(
-          (blob) => {
-            resolve({ blob, url: URL.createObjectURL(blob) });
-          },
-          'image/png'
-        );
-      };
-      img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
-}
+        const done = (ext, q = 0.92) =>
+          c.toBlob(
+            (b) => { URL.revokeObjectURL(url); resolve({ blob: b, ext }); },
+            ext === "png" ? "image/png" : "image/jpeg",
+            q
+          );
 
-export async function rotateImage(file, degrees) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        const rad = (degrees * Math.PI) / 180;
-        const cos = Math.cos(rad);
-        const sin = Math.sin(rad);
-        const newWidth = Math.abs(img.width * cos) + Math.abs(img.height * sin);
-        const newHeight = Math.abs(img.width * sin) + Math.abs(img.height * cos);
-        
-        canvas.width = newWidth;
-        canvas.height = newHeight;
-        const ctx = canvas.getContext('2d');
-        ctx.translate(newWidth / 2, newHeight / 2);
-        ctx.rotate(rad);
-        ctx.drawImage(img, -img.width / 2, -img.height / 2);
-        
-        canvas.toBlob(
-          (blob) => {
-            resolve({ blob, url: URL.createObjectURL(blob) });
-          },
-          'image/png'
-        );
-      };
-      img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
-}
+        if (id === "compress") {
+          c.width = img.width; c.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          done("jpg", (opts.quality || 70) / 100);
 
-export async function flipImage(file, axis = 'horizontal') {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d');
-        
-        if (axis === 'horizontal') {
-          ctx.translate(canvas.width, 0);
-          ctx.scale(-1, 1);
+        } else if (id === "resize") {
+          let w = parseInt(opts.w) || img.width;
+          let h = parseInt(opts.h) || img.height;
+          if (opts.w && !opts.h) h = Math.round(img.height * (w / img.width));
+          if (opts.h && !opts.w) w = Math.round(img.width * (h / img.height));
+          c.width = w; c.height = h;
+          ctx.drawImage(img, 0, 0, w, h);
+          done("jpg");
+
+        } else if (id === "rotate") {
+          const deg = opts.deg || 90;
+          const rad = (deg * Math.PI) / 180;
+          const sw = deg === 90 || deg === 270;
+          c.width = sw ? img.height : img.width;
+          c.height = sw ? img.width : img.height;
+          ctx.translate(c.width / 2, c.height / 2);
+          ctx.rotate(rad);
+          if (opts.fh) ctx.scale(-1, 1);
+          if (opts.fv) ctx.scale(1, -1);
+          ctx.drawImage(img, -img.width / 2, -img.height / 2);
+          done("jpg");
+
+        } else if (id === "crop") {
+          const cx = parseInt(opts.cx) || 0;
+          const cy = parseInt(opts.cy) || 0;
+          const cw = parseInt(opts.cw) || Math.floor(img.width * 0.7);
+          const ch = parseInt(opts.ch) || Math.floor(img.height * 0.7);
+          c.width = cw; c.height = ch;
+          ctx.drawImage(img, cx, cy, cw, ch, 0, 0, cw, ch);
+          done("jpg");
+
+        } else if (["png-to-jpg", "webp-to-jpg", "heic-to-jpg"].includes(id)) {
+          c.width = img.width; c.height = img.height;
+          ctx.fillStyle = "#fff";
+          ctx.fillRect(0, 0, c.width, c.height);
+          ctx.drawImage(img, 0, 0);
+          done("jpg");
+
+        } else if (id === "jpg-to-png" || id === "svg-to-png") {
+          c.width = img.width; c.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          done("png");
+
+        } else if (id === "upscale") {
+          const sc = opts.scale || 2;
+          c.width = img.width * sc; c.height = img.height * sc;
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = "high";
+          ctx.drawImage(img, 0, 0, c.width, c.height);
+          done("jpg", 0.95);
+
+        } else if (id === "blur-bg") {
+          c.width = img.width; c.height = img.height;
+          ctx.filter = `blur(${opts.blur || 10}px)`;
+          ctx.drawImage(img, 0, 0);
+          ctx.filter = "none";
+          const sw = img.width * 0.6, sh = img.height * 0.8;
+          const sx = (img.width - sw) / 2, sy = (img.height - sh) / 2;
+          ctx.drawImage(img, sx, sy, sw, sh, sx, sy, sw, sh);
+          done("jpg");
+
+        } else if (id === "watermark") {
+          c.width = img.width; c.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          const fs = Math.max(20, Math.round(img.width * 0.06));
+          ctx.font = `bold ${fs}px Arial`;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.globalAlpha = opts.opacity || 0.4;
+          ctx.fillStyle = opts.color || "#fff";
+          ctx.strokeStyle = "rgba(0,0,0,0.4)";
+          ctx.lineWidth = 2;
+          const pos = opts.pos || "center";
+          const tx = pos === "topleft" ? img.width * 0.2 : pos === "bottomright" ? img.width * 0.8 : img.width / 2;
+          const ty = pos === "topleft" ? img.height * 0.1 : pos === "bottomright" ? img.height * 0.9 : img.height / 2;
+          ctx.strokeText(opts.text || "Pixalyse", tx, ty);
+          ctx.fillText(opts.text || "Pixalyse", tx, ty);
+          done("jpg");
+
+        } else if (id === "passport") {
+          const sizes = { "35x45": [413, 531], "2x2": [600, 600], "40x60": [472, 709] };
+          const sz = sizes[opts.size || "35x45"] || [413, 531];
+          c.width = sz[0]; c.height = sz[1];
+          ctx.drawImage(img, 0, 0, sz[0], sz[1]);
+          done("jpg");
+
         } else {
-          ctx.translate(0, canvas.height);
-          ctx.scale(1, -1);
+          c.width = img.width; c.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          done("jpg", 0.9);
         }
-        
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob(
-          (blob) => {
-            resolve({ blob, url: URL.createObjectURL(blob) });
-          },
-          'image/png'
-        );
-      };
-      img.src = e.target.result;
+
+      } catch (e) {
+        URL.revokeObjectURL(url);
+        reject(e);
+      }
     };
-    reader.readAsDataURL(file);
+
+    img.src = url;
   });
 }
 
-export async function addWatermark(file, text, fontSize = 24, opacity = 0.5) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-        
-        ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`;
-        ctx.font = `${fontSize}px Arial`;
-        ctx.textAlign = 'center';
-        ctx.fillText(text, canvas.width / 2, canvas.height - 30);
-        
-        canvas.toBlob(
-          (blob) => {
-            resolve({ blob, url: URL.createObjectURL(blob) });
-          },
-          'image/png'
-        );
-      };
-      img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
-}
+export const fmtBytes = (b) => {
+  if (!b) return "0 B";
+  if (b < 1024) return b + " B";
+  if (b < 1048576) return (b / 1024).toFixed(1) + " KB";
+  return (b / 1048576).toFixed(2) + " MB";
+};
 
-export async function convertFormat(file, targetFormat) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-        
-        const mimeType = targetFormat === 'png' ? 'image/png' : 'image/jpeg';
-        canvas.toBlob(
-          (blob) => {
-            resolve({ blob, url: URL.createObjectURL(blob), format: targetFormat });
-          },
-          mimeType,
-          0.9
-        );
-      };
-      img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-export async function imageToBase64(file) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      resolve({ base64: e.target.result, size: file.size });
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-// Placeholder for AI tools that would require backend APIs
-export function upscaleImage() {
-  throw new Error('Upscale requires backend API integration');
-}
-
-export function removeBackground() {
-  throw new Error('Remove Background requires backend API integration (e.g., remove.bg)');
-}
-
-export function blurBackground() {
-  throw new Error('Blur Background requires backend API integration');
-}
-
-// jsPDF is loaded from CDN in index.html
-export async function imageToPDF(file) {
-  if (!window.jspdf) throw new Error('jsPDF library not loaded');
-  const base64 = await imageToBase64(file);
-  const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF();
-  pdf.addImage(base64.base64, 'JPEG', 10, 10, 190, 190);
-  return pdf;
-}
+export const outName = (n, e) => n.replace(/\.[^/.]+$/, "") + "_pixalyse." + e;
