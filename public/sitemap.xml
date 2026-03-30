@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
+  <url><loc>https://pixalyse.com/</loc><lastmod>2026-03-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://pixalyse.com/blog</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/embed</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/social-media-image-sizes</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/languages</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/privacy</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/terms</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/contact</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Tool pages (37) -->
+  <url><loc>https://pixalyse.com/tool/compress</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/bulk-compress</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/resize</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/crop</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/rotate</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/watermark</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/upscale</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/blur-bg</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/remove-bg</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/png-to-jpg</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/jpg-to-png</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/webp-to-jpg</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/heic-to-jpg</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/svg-to-png</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/image-to-pdf</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/pdf-to-image</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/gif-to-mp4</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/base64</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/passport</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/screenshot-to-pdf</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/invoice-generator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/profit-margin</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/salary-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/emi-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/loan-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/interest-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/roi-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/gst-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/sip-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/fd-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/ppf-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/unit-converter</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/word-counter</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/qr-generator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/bmi-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/age-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pixalyse.com/tool/percentage-calculator</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Hub pages -->
+  <url><loc>https://pixalyse.com/image-compression-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pixalyse.com/image-format-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pixalyse.com/how-to-optimize-images-for-web</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Language pages -->
+  <url><loc>https://pixalyse.com/hi</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/pt</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/es</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/id</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pixalyse.com/ar</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog posts (60) -->
+  <url><loc>https://pixalyse.com/blog/compress-images-website-speed</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/resize-images-every-platform</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/png-vs-jpg-which-format</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/heic-to-jpg-iphone-problem-explained</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/batch-compress-images-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/upscale-images-ai-explained</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/how-to-watermark-photos</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/blur-background-portrait-photography</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/svg-to-png-designers-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/how-to-crop-images-like-pro</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/when-rotate-flip-images</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/images-to-pdf-easy-way</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/pdf-to-image-extract-pages</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/image-base64-developers-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/passport-photo-at-home-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/screenshot-to-pdf-workflow</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/gifs-killing-page-speed</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/jpg-to-png-transparency-design</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/webp-format-explained</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/remove-background-photography</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/compress-images-google-core-web-vitals</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/image-compression-ecommerce-conversions</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/resize-images-for-print-dpi-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/resize-images-responsive-web-design</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/crop-images-social-media-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/golden-ratio-rule-thirds-cropping</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/fix-upside-down-photos-automatically</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/mirror-flip-images-design-use-cases</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/watermark-strategy-photographers-freelancers</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/bulk-watermark-workflow-content-creators</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/ai-upscale-product-photos-retina</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/restore-old-scanned-photos-ai</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/blur-background-professional-headshot</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/bokeh-effect-product-photography</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/transparent-png-web-design-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/remove-background-amazon-product-requirements</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/convert-png-screenshot-jpg-workflow</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/png-to-jpg-email-attachments</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/add-transparent-background-logo-jpg</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/lossless-editing-workflow-jpg-to-png</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/webp-compatibility-problems-solutions</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/website-webp-vs-jpg-performance</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/heic-vs-jpg-quality-comparison</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/send-iphone-photos-android-windows-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/export-logo-figma-canva-to-png</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/svg-to-png-for-social-media-profiles</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/image-to-pdf-visa-government-applications</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/digital-portfolio-pdf-guide</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/pdf-slide-to-social-media-image</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/extract-images-pdf-techniques</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/gif-vs-mp4-web-performance</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/make-website-animations-faster</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/wordpress-media-library-optimise</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/event-photo-batch-processing</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/base64-email-templates-images</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/base64-images-css-performance</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/passport-photo-rejection-reasons</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/visa-photo-requirements-different-countries</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/screenshot-pdf-client-reporting</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pixalyse.com/blog/legal-documentation-screenshots-pdf</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Programmatic pages (155) -->
+  <url><loc>https://pixalyse.com/compress-image-for-whatsapp</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-for-email</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-for-instagram</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-for-facebook</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-for-linkedin</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-for-wordpress</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-under-1mb</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-under-200kb</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-without-losing-quality</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-jpg-online-free</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-png-online-free</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-for-website</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://pixalyse.com/compress-image-for-job-application</loc><lastmod>2026-03-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>

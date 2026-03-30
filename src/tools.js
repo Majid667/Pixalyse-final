@@ -1,0 +1,97 @@
+// ─── 37 TOOLS TOTAL ──────────────────────────────────────────────────────────
+// Image (20) + Business (3) + Finance (11) + Tools (6) = 40 (some overlap in display)
+export const TOOLS = [
+  // ── Image ────────────────────────────────────────────────────────────────
+  { id:"compress",            name:"Compress Image",       desc:"Shrink file size up to 90%",           icon:"compress",  color:"#e74c3c", cat:"Image"   },
+  { id:"bulk-compress",       name:"Bulk Compress",        desc:"Compress 50 images at once",           icon:"bulk",      color:"#f39c12", cat:"Image"   },
+  { id:"resize",              name:"Resize Image",         desc:"Set any width & height in pixels",     icon:"resize",    color:"#e67e22", cat:"Image"   },
+  { id:"crop",                name:"Crop Image",           desc:"Crop to any area precisely",           icon:"crop",      color:"#d4ac0d", cat:"Image"   },
+  { id:"rotate",              name:"Rotate & Flip",        desc:"90°, 180°, 270° + flip",              icon:"rotate",    color:"#27ae60", cat:"Image"   },
+  { id:"watermark",           name:"Add Watermark",        desc:"Protect photos with custom text",      icon:"watermark", color:"#16a085", cat:"Image"   },
+  { id:"upscale",             name:"Upscale Image",        desc:"2x–4x AI enhancement",                icon:"upscale",   color:"#2980b9", cat:"Image"   },
+  { id:"blur-bg",             name:"Blur Background",      desc:"Pro portrait background blur",         icon:"blur",      color:"#8e44ad", cat:"Image"   },
+  { id:"remove-bg",           name:"Remove Background",    desc:"AI background removal",               icon:"rembg",     color:"#c0392b", cat:"Image"   },
+  { id:"png-to-jpg",          name:"PNG to JPG",           desc:"Convert PNG to JPG instantly",         icon:"convert",   color:"#d35400", cat:"Image"   },
+  { id:"jpg-to-png",          name:"JPG to PNG",           desc:"Add transparency to your image",       icon:"convert",   color:"#1abc9c", cat:"Image"   },
+  { id:"webp-to-jpg",         name:"WebP to JPG",          desc:"Universal browser compatibility",      icon:"convert",   color:"#2ecc71", cat:"Image"   },
+  { id:"heic-to-jpg",         name:"HEIC to JPG",          desc:"iPhone photos to JPG",                 icon:"phone",     color:"#3498db", cat:"Image"   },
+  { id:"svg-to-png",          name:"SVG to PNG",           desc:"Vector to raster at any scale",        icon:"svgicon",   color:"#9b59b6", cat:"Image"   },
+  { id:"image-to-pdf",        name:"Image to PDF",         desc:"Batch images into one PDF",            icon:"pdf",       color:"#e74c3c", cat:"Image"   },
+  { id:"pdf-to-image",        name:"PDF to JPG",           desc:"Every page as a sharp image",          icon:"pdf",       color:"#e67e22", cat:"Image"   },
+  { id:"gif-to-mp4",          name:"GIF to MP4",           desc:"Smaller file, better quality — soon",  icon:"gif",       color:"#27ae60", cat:"Image"   },
+  { id:"base64",              name:"Image to Base64",      desc:"For developers & embed codes",         icon:"code",      color:"#7f8c8d", cat:"Image"   },
+  { id:"passport",            name:"Passport Photo",       desc:"US, EU, India & more standards",       icon:"passport",  color:"#2980b9", cat:"Image"   },
+  { id:"screenshot-to-pdf",   name:"Screenshot to PDF",   desc:"Screenshots into one clean PDF",       icon:"pdf",       color:"#8e44ad", cat:"Image"   },
+  // ── Business ─────────────────────────────────────────────────────────────
+  { id:"invoice-generator",   name:"Invoice Generator",   desc:"Create & print professional invoices", icon:"invoice",   color:"#27ae60", cat:"Business"},
+  { id:"profit-margin",       name:"Profit Margin Calc",  desc:"Margins, markup & profit",             icon:"profit",    color:"#e74c3c", cat:"Business"},
+  { id:"salary-calculator",   name:"Salary Calculator",   desc:"Gross to net, tax & take-home pay",    icon:"salary",    color:"#8e44ad", cat:"Business"},
+  // ── Finance ──────────────────────────────────────────────────────────────
+  { id:"emi-calculator",      name:"EMI Calculator",      desc:"Monthly loan instalment",              icon:"emi",       color:"#2980b9", cat:"Finance" },
+  { id:"loan-calculator",     name:"Loan Calculator",     desc:"Total cost, interest & early payoff",  icon:"loan",      color:"#16a085", cat:"Finance" },
+  { id:"interest-calculator", name:"Interest Calculator", desc:"Simple & compound interest",           icon:"interest",  color:"#e67e22", cat:"Finance" },
+  { id:"roi-calculator",      name:"ROI Calculator",      desc:"Return on investment & payback",       icon:"roi",       color:"#d35400", cat:"Finance" },
+  { id:"gst-calculator",      name:"GST Calculator",      desc:"Inclusive & exclusive GST India",      icon:"gst",       color:"#27ae60", cat:"Finance" },
+  { id:"sip-calculator",      name:"SIP Calculator",      desc:"SIP returns & wealth creation",        icon:"sip",       color:"#2980b9", cat:"Finance" },
+  { id:"fd-calculator",       name:"FD Calculator",       desc:"Fixed deposit maturity amount",        icon:"fd",        color:"#e67e22", cat:"Finance" },
+  { id:"ppf-calculator",      name:"PPF Calculator",      desc:"Public Provident Fund returns",        icon:"ppf",       color:"#27ae60", cat:"Finance" },
+  // ── Tools ────────────────────────────────────────────────────────────────
+  { id:"unit-converter",      name:"Unit Converter",      desc:"Length, weight, temp, area, speed",    icon:"unit",      color:"#16a085", cat:"Tools"   },
+  { id:"word-counter",        name:"Word Counter",         desc:"Words, chars, readability score",      icon:"word",      color:"#2980b9", cat:"Tools"   },
+  { id:"qr-generator",        name:"QR Code Generator",   desc:"Create QR codes for any content",      icon:"qr",        color:"#1a1a2e", cat:"Tools"   },
+  { id:"bmi-calculator",      name:"BMI Calculator",       desc:"Body mass index & health range",       icon:"bmi",       color:"#e74c3c", cat:"Tools"   },
+  { id:"age-calculator",      name:"Age Calculator",       desc:"Exact age in years, months, days",     icon:"age",       color:"#8e44ad", cat:"Tools"   },
+  { id:"percentage-calculator",name:"Percentage Calc",    desc:"% of, % change, % difference",         icon:"percent",   color:"#d35400", cat:"Tools"   },
+];
+
+export const CATS = ["All","Image","Business","Finance","Tools"];
+
+// ─── INTERLINKING MAP ─────────────────────────────────────────────────────────
+export const TOOL_LINKS = {
+  "compress":             ["bulk-compress","image-to-pdf","invoice-generator","unit-converter"],
+  "bulk-compress":        ["compress","screenshot-to-pdf","invoice-generator","roi-calculator"],
+  "resize":               ["crop","compress","passport","word-counter"],
+  "crop":                 ["resize","watermark","passport","profit-margin"],
+  "rotate":               ["crop","resize","watermark","compress"],
+  "watermark":            ["compress","invoice-generator","bulk-compress","qr-generator"],
+  "upscale":              ["compress","blur-bg","roi-calculator","remove-bg"],
+  "blur-bg":              ["remove-bg","upscale","compress","passport"],
+  "remove-bg":            ["blur-bg","upscale","compress","invoice-generator"],
+  "png-to-jpg":           ["compress","jpg-to-png","image-to-pdf","invoice-generator"],
+  "jpg-to-png":           ["png-to-jpg","remove-bg","svg-to-png","compress"],
+  "webp-to-jpg":          ["png-to-jpg","compress","heic-to-jpg","invoice-generator"],
+  "heic-to-jpg":          ["webp-to-jpg","compress","png-to-jpg","passport"],
+  "svg-to-png":           ["jpg-to-png","resize","compress","qr-generator"],
+  "image-to-pdf":         ["screenshot-to-pdf","compress","invoice-generator","pdf-to-image"],
+  "pdf-to-image":         ["image-to-pdf","compress","resize","invoice-generator"],
+  "gif-to-mp4":           ["compress","bulk-compress","roi-calculator","image-to-pdf"],
+  "base64":               ["compress","svg-to-png","roi-calculator","word-counter"],
+  "passport":             ["compress","resize","crop","age-calculator"],
+  "screenshot-to-pdf":    ["image-to-pdf","compress","invoice-generator","word-counter"],
+  "invoice-generator":    ["profit-margin","roi-calculator","salary-calculator","gst-calculator"],
+  "profit-margin":        ["roi-calculator","invoice-generator","loan-calculator","salary-calculator"],
+  "salary-calculator":    ["emi-calculator","loan-calculator","profit-margin","sip-calculator"],
+  "emi-calculator":       ["loan-calculator","interest-calculator","roi-calculator","salary-calculator"],
+  "loan-calculator":      ["emi-calculator","interest-calculator","roi-calculator","profit-margin"],
+  "interest-calculator":  ["emi-calculator","loan-calculator","roi-calculator","fd-calculator"],
+  "roi-calculator":       ["profit-margin","interest-calculator","sip-calculator","invoice-generator"],
+  "gst-calculator":       ["invoice-generator","profit-margin","salary-calculator","percentage-calculator"],
+  "sip-calculator":       ["fd-calculator","ppf-calculator","roi-calculator","interest-calculator"],
+  "fd-calculator":        ["sip-calculator","ppf-calculator","interest-calculator","emi-calculator"],
+  "ppf-calculator":       ["fd-calculator","sip-calculator","roi-calculator","salary-calculator"],
+  "unit-converter":       ["word-counter","qr-generator","percentage-calculator","bmi-calculator"],
+  "word-counter":         ["unit-converter","qr-generator","percentage-calculator","invoice-generator"],
+  "qr-generator":         ["word-counter","unit-converter","invoice-generator","watermark"],
+  "bmi-calculator":       ["age-calculator","unit-converter","percentage-calculator","word-counter"],
+  "age-calculator":       ["bmi-calculator","unit-converter","percentage-calculator","ppf-calculator"],
+  "percentage-calculator":["gst-calculator","profit-margin","roi-calculator","bmi-calculator"],
+};
+
+// ─── WORKFLOW JOURNEYS ────────────────────────────────────────────────────────
+export const JOURNEYS = [
+  { id:"freelancer", label:"Freelancer Workflow",  icon:"💼", color:"#27ae60", desc:"Images → invoice → profit", steps:["compress","watermark","invoice-generator","profit-margin"] },
+  { id:"ecommerce",  label:"E-commerce Workflow",  icon:"🛒", color:"#e74c3c", desc:"Product photos → ROI tracking", steps:["remove-bg","compress","bulk-compress","roi-calculator"] },
+  { id:"finance",    label:"Finance Planning",     icon:"📊", color:"#2980b9", desc:"Plan loans, SIP, FD, EMI",   steps:["loan-calculator","emi-calculator","sip-calculator","ppf-calculator"] },
+  { id:"content",    label:"Content Creator",      icon:"🎨", color:"#8e44ad", desc:"Create → optimise → monetise", steps:["resize","compress","watermark","salary-calculator"] },
+  { id:"utilities",  label:"Daily Utilities",      icon:"🛠️",color:"#16a085", desc:"Quick everyday calculations",  steps:["unit-converter","percentage-calculator","age-calculator","word-counter"] },
+];
