@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import ToolPage from "./pages/ToolPage";
@@ -135,6 +136,7 @@ export default function App() {
       {route.type==="contact"      && <ContactPage onHome={goHome}/>}
 
       <EmailBanner/>
+      <Analytics />
     </div>
   );
 }
